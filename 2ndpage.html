@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- use . for class and # for id  -->
+    <style>
+        .ctr {
+            border: 4px solid black;
+            background-color: silver;
+            margin: 10px;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 10px;
+
+        }
+
+        .button {
+            background-color: chocolate;
+            padding: 5px;
+            margin: 10px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+
+        }
+
+        .button:hover {
+
+            border: 2px solid black;
+            background-color: silver;
+            text-decoration: none;
+
+        }
+
+        ;
+        
+    </style>
+
+
+    <style>
+        .myclass {
+            color: blue;
+            background-color: brown;
+            
+        }
+    </style>
+    <style>
+        .container {
+            border: 5px solid red;
+            width: 500px;
+            height: 500px;
+            background-color: rgb(78, 144, 183);
+
+        }
+
+
+        .newclass1 {
+            background-color: rgb(236, 123, 236);
+            border-radius: 5px;
+
+            padding: 5px;
+            margin: 10px;
+            padding-left: 20px;
+            width: 180px;
+            height: 180px;
+            border: 2px solid blue;
+            float: left;
+            position: relative;
+            left: 10px;
+            top: 10px;
+
+
+
+
+        }
+
+        .newclass2 {
+            background-color: rgb(236, 123, 236);
+            border-radius: 5px;
+            padding: 5px;
+            margin: 10px;
+            padding-left: 20px;
+            width: 180px;
+            height: 180px;
+            border: 2px solid blue;
+            float: right;
+            position: relative;
+            right: 10px;
+            top: 10px;
+
+
+        }
+
+        
+    </style>
+
+
+    <style>
+        #first {
+            background-image: url(photo1.jpg);
+            height: 500px;
+            background-size: 700px;
+            border-width: 10px;
+            border-color: blueviolet;
+            border-radius: 10px;
+            border-style: solid;
+            background-position: center;
+            background-image: no;
+            background-repeat: no-repeat;
+
+
+        }
+
+        .nevbar {
+            background-color: black;
+            color: white;
+            height: 50px;
+            border-radius: 5px;
+
+
+
+        }
+
+        .navbar li a :hover {
+            text-decoration: none;
+            padding: 3px 3px;
+        }
+
+        .nevbar li {
+            float: left;
+            padding: 3px 3px;
+            list-style: none;
+            margin: 10px 10px;
+
+
+
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+
+
+        #search {
+            padding: 2px;
+            float: right;
+            margin-right: 20px;
+            margin-top: 12px;
+            border-radius: 5px;
+        }
+
+        header {
+            /* use margin auto to place element in center */
+            margin: auto;
+            width: 90%;
+        }
+
+        /* use display inline block to display block element in inline format */
+        .box {
+            border: 4px solid black;
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            margin: 2px;
+        }
+
+        /* relative position is used to hold element at one place and then move it  /
+    #box2{
+        position:relative;
+        top: 20px;
+    }
+     / absolute is used to position the element form its first parent element /
+    #box3{
+        position: absolute;
+        right: 100px;
+    }
+     fixed is used to fix element at one place  /
+    #box4{
+        position: fixed;
+        bottom: 10px ;
+        right: 10px;
+    }
+    / sticky is used almost same as fixed  /
+    #box1{
+        position: sticky;
+        top: 3px;
+    } */
+    </style>
+
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="nevbar">
+            <ul>
+                <li><a href="#"></a>home</li>
+                <li><a href="#"></a>about</li>
+                <li><a href="#
+                    "></a>prices</li>
+                <li><a href="#"></a>services</li>
+            </ul>
+
+            <input type="text" name="search" id="search" placeholder="search anything">
+
+
+        </nav>
+    </header>
+    <!-- <h2 class="myclass"> this is heading </h2>
+    <H2 style="color: crimson;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, libero?</H2>
+    
+<p id="first"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, mollitia.    </p> -->
+    <div class="container">
+        <div class="newclass1">
+            <h1>first paragraph</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, ducimus.</p>
+
+        </div>
+
+        <div class="newclass2">
+            <h1>second paragraph</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, ducimus.</p>
+        </div>
+
+        <div class="ctr">
+
+            <h1>third paragraph</h1>
+            <p>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque rerum dolorem,
+                distinctio, sesapiente est aut cumque, ratione ducimus soluta architecto perspiciatis porro deleniti
+                accusamus facilis ipsum quam? Maiores hic, fugit facere impedit nesciunt dolorum ipsam est iste sint vel
+                rerum quidem accusantium provident! Modi, voluptates! sit amet consectetur, adipisicing elit. Excepturi,
+                ducimus.</p>
+            <a class=button="google.com"></a>
+            <button class="button">click here</button>
+            <button class="button">search here</button>
+        </div>
+
+
+    </div>
+    </div>
+
+    <br><br><br>
+    <div class="ctr">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi officia veniam dolorem iure et quia
+            exercitationem eaque, ullam rerum nostrum voluptates corrupti quos porro recusandae expedita accusamus error
+            doloremque. Obcaecati?</p>
+
+        <a href="" class="button">google link</a>
+        <button class="button">button</button>
+
+    </div>
+
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">chat with us</div>
+
+
+
+
+
+
+
+</body>
+
+</html>
