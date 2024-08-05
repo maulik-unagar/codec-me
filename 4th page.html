@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+
+<style>
+    .btn {
+        background-color: black;
+        color: bisque;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+        margin: auto 20px;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #time{
+        border: 2px solid black;
+        background:blueviolet;
+        color: wheat;
+        padding: 2px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>This is heading</h1>
+        <p id="para">this is container class </p>
+
+        <p>time now is <span id="time"></span></p>
+        <br>
+        <div>
+            <div id="hello" style="color: blueviolet;">
+
+            </div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident possimus eum amet assumenda non
+            praesentium aspernatur aperiam ab consectetur itaque!
+        </div>
+
+        <div id="main" class="contttt">
+            <ul>
+                <li>home</li>
+                <li>about us</li>
+                <li>more about us</li>
+                <li>contect us</li>
+            </ul>
+        </div>
+
+        <button class="btn" onclick="toggleHide()">
+            click me to hide container element
+        </button>
+
+
+        <!-- <script>
+            var x = 40;
+            var y = 50;
+
+            console.log("x+y = " + (x + y));
+            console.log("x-y = " + (x - y));
+            console.log("x*y = " + (x * y));
+            console.log("x/y = " + (x / y));
+
+            var name = "maulik";
+            var message = " is a good boy ";
+            console.log(name + message);
+
+            console.log(`${message}`);
+
+            // use this to add element in html by using java 
+            document.getElementById('hello').innerHTML = '<h1> this is java inserted element'
+
+            console.log("------shorting function in java---------")
+
+            var str = "this is string"
+
+            var position = str.indexOf('is');
+            console.log(position);
+
+            var position = str.lastIndexOf('is');
+            console.log(position);
+
+            var substr = str.slice(1, 6);
+            console.log(substr);
+
+            // there is difference bet slice and substring try to find it 
+            var substr = str.substring(1, 6);
+            console.log(substr);
+
+            var replace = str.replace('string','maulik');
+            console.log(replace);
+            
+            console.log (str.toUpperCase());
+            console.log (str.toLowerCase());
+
+            var newstr = str.concat(' this is concatinated line');
+            console.log(newstr);
+
+            var strwithspace="    this      is       white space      string       ";
+            console.log(strwithspace);
+            console.log(strwithspace.trim());
+
+            var char2 =str.charAt(2);
+            var char3 =str.charCodeAt(2);   //gives code of that character 
+            console.log(char2);
+            console.log(char3);  
+
+
+        </script> -->
+
+        <!-- </div>
+
+    <script>
+
+        let age = "u";
+        {
+            let age = "uuuu";
+            console.log(age) // it uses local variable 
+        }
+        console.log(age)  // it uses global variable
+
+
+        // constent variable cant be changed in any condition 
+        const a = 34;
+
+        let count = 5;
+        if (count > 18) {
+            console.log("count is : " + count)
+        }
+        else if (count == 2) {
+            console.log("count is : " + count)
+        }
+        else if (count == 5) {
+            console.log("count is : " + count)
+        }
+        else {
+            console.log("count is not accomodated")
+        }
+
+
+
+        const value = 45;
+        switch (value) {
+            case 4:
+                console.log("the value is equal to:", value)
+                break;
+            case 41:
+                console.log("the value is equal to:"+ value)
+                break;
+            case 42:
+                console.log("the value is equal to:"+ value)
+                break;
+            case 43:
+                console.log("the value is equal to:"+ value)
+                break;
+            default:
+                console.log("the is not equal to 4,41,42,43")
+                break;
+        }
+
+
+        let employe ={
+            name: "maulik",
+            salary: 10,
+            chenal: "maulik unagar ",
+            
+        }
+
+        console.log(employe)
+
+        let names =[3,2,1,"maulik",undefined ]
+        console.log(names.length)
+        console.log(names)
+        names=names.sort();
+        console.log(names);
+
+
+        console.log("________________________________________________________");
+        console.log("This is tutorial 53");
+
+function greet(name, greetText="Greetings from JavaScript"){
+    let name1 = "Name1";
+    console.log(greetText + " " + name);
+    console.log(name + " is a good boy");
+}
+
+function sum(a,b,c){
+    let d = a + b + c;
+    return d;
+    // This line will never execute (Unreachable code)
+    // console.log("Function is returned");
+}
+
+
+let name = "Harry";
+let name1 = "Shubham";
+let name2 = "Rohan";
+let name3 = "Sagar";
+let greetText1 = "Good Morning";
+greet(name, greetText1);
+greet(name1, greetText1);
+greet(name2, greetText1);
+// let returnVal = greet(name3);
+// console.log(returnVal)
+
+let returnVal = sum(1,2,3);
+console.log(returnVal)
+// console.log(name + " is a good boy");
+// console.log(name1 + " is a good boy");
+// console.log(name2 + " is a good boy");
+// console.log(name3 + " is a good boy"); 
+
+console.log("________________________________________________________");
+
+// this is syntax of giving alert msg in website using java
+// alert dont return anything
+alert("this is alert msg ");
+
+let ask_name = prompt("what is your name ", "guest");
+console.log(ask_name)
+
+let delet_post=confirm("do you really want to delet this post");
+if(delet_post){
+    console.log("your post has been deleted")
+}
+else {
+    console.log("post not deleted")
+}
+
+console.log("________________hW question________________________________________");
+
+let new_age = prompt("enter your age")
+if (new_age<18){
+    console.log("less then 18 not allow")
+}
+else{
+    console.log("you are allowed")
+}
+
+ </script> -->
+
+
+        <script>
+
+            // let i = 0;
+            // for (i = 0; i < 3; i++) {
+            //     console.log(i);
+            // }
+
+            // let friends = ["rohan", "mohit", "meet", "maulik"];
+            // for (let i = 0; i < friends.length; i++) {
+            //     console.log("hello friends " + friends[i]);
+
+            // }
+
+            // console.log("_______________2nd way_________________")
+
+
+            // // for-each method of doing iteration on loop
+            // friends.forEach(function f(elements) {
+            //     console.log("hello friends " + elements + "to modern java script")
+            // });
+
+
+            // console.log("_______________3nd way_________________")
+            // //type 3:  array iteration  (use for-of loop )
+
+            // for (elements of friends) {
+            //     console.log("hello" + elements + ".")
+            // }
+
+            // console.log("_______________4nd way_________________")
+            // // type 4: object iteration (use for-in loop )
+
+            // let employee = {
+            //     name: "maulik",
+            //     class: 10,
+            //     school: "ssb",
+            // }
+            // for (key in employee) {
+            //     console.log(`the ${key} of employee is ${employee[key]}`);
+            // }
+
+            // // do-while loop in js
+            // let j = 34;
+            // do {
+            //     console.log(`${j} is less then 4 but w`);
+            //     j++;
+            // } while (j < 4)
+
+            // // while loop in js 
+            // let ii = 0;
+            // while (ii < 4) {
+            //     console.log(`${ii} is less then 4 `);
+            //     ii++
+            // }
+
+
+            // let main = document.getElementById("main");
+            // console.log(main);
+
+            // write "main.innerHTML in colsole tp access the content of html from browaser only"
+
+            // to change the element of html from console use this code 
+            // main.innerHTML="<li> only Element <li>"
+            // now your whole list element will be replaced by this and you can use this code here also
+
+
+            // let classcall = document.getElementsByClassName("contttt")
+            // console.log(classcall)
+
+            // let select = document.querySelector('#main')
+            // console.log("selector returns", select)
+
+            // ________browser Events____________________
+            // click 
+            // contextmanu
+            // mouseover/mouseout
+            // mouseout/mouseup
+            // mouseover
+            // Submit
+            // focus
+            // DOMcontentloaded
+            // transitioned
+
+
+//             let para = document.getElementById('para');
+//             para.addEventListener('mouseover', function run(){
+//                 console.log("mouse inside ")
+//             });
+
+//             para.addEventListener('mouseout', function(run){
+//                 console.log("mouse is out side  ")
+
+//             })
+
+//             function toggleHide(){
+//                 let para = document.getElementById('para');
+//                 if(para.style.display != 'none'){
+//                     para.style.display = 'none';
+//                 }
+//                 else{
+//                     para.style.display = 'block';
+//                 }
+//             }
+
+//             // setTimeout= allows us to run the function once after the interval of time 
+//             // clearTimeout=allows us to run the function repeatedly after interval of time 
+
+//             function greet(name){
+//                 console.log("hello good morning "+ name);
+//             }
+
+//            settime= setTimeout(greet,5000,"maulik");
+//            console.log(settime)
+
+//         //we cant call function inside setTimeout like "great()"
+//         //we can use it by name like "great"
+//         // setTimeout(great(),12000);
+//         // this is wrong 
+
+//         //    due to this line now after 5 sec above code will not be executed
+//         //    clearTimeout(settime)  
+
+//         // setInterval is used to execute anything in interval of time
+//         // setInterval(greet,1000,"maulik");
+//         // its best appliction is to display time
+
+//         // code to display time in website 
+//         function displaytime(){
+//             time = new Date();
+//             console.log(time); //not imp line 
+//             document.getElementById('time').innerHTML=time;
+//         }
+
+//         setInterval(displaytime, 1000);
+
+
+// // arrow function syntax
+// // let greet=() => {
+// //     console.log("good morning")
+// // }
+
+// let greett= () =>     console.log("good morning")
+
+// let sum2 = (a,b)=> {
+//     return a+b 
+// };
+
+// let sum3 = (a,b) => a+b;
+// let half =(a,b) => a/2;
+
+// function greet (){
+//     console.log("good morning")
+// }
+// greet()
+
+// setTimeout (()=> {
+//     console.log("we are inside the screentime out")
+// },3000)
+
+// // let obj1={
+// //     greeting : "good morning and "
+    
+    
+// //     names : ["maulik","meet","maulik"],
+
+// //     speak(){
+// //         this.names.forEach((student) => {
+// //             console.log(this.greeting + "kukdoo koo " +student)
+            
+// //         });
+// //     }
+// // }
+
+// // obj1.speak();
+
+
+//     // Printing the Math Object
+//     let m = Math;
+//     console.log(m)
+
+//     // Printing the constants from Math Object
+//     console.log("The value of Math.E is ", Math.E)
+//     console.log("The value of Math.PI is ", Math.PI)
+//     console.log("The value of Math.LN2 is ", Math.LN2)
+//     console.log("The value of Math.SQRT1_2 is ", Math.SQRT1_2)
+//     console.log("The value of Math.LOG2E is ", Math.LOG2E)
+
+//     // Printing the Functions from Math Object 
+//     let a = 34.64534;
+//     let b = 89;
+
+//     console.log("The value of a and b is ", a, b);
+//     console.log("The value of a and b rounded is ", Math.round(a), Math.round(b));
+
+//     console.log("3 raised to the power of 2 is ", Math.pow(3, 2)) 
+//     console.log("2 raised to the power of 12 is ", Math.pow(2, 12)) 
+//     console.log("1 raised to the power of 2 is ", Math.pow(1, 2)) 
+
+//     console.log("Square root of 36 is ", Math.sqrt(36)) 
+//     console.log("Square root of 64 is ", Math.sqrt(64)) 
+//     console.log("Square root of 50 is ", Math.sqrt(50)) 
+
+//     // Ceil and floor
+//     console.log("5.8 rounded up to nearest integer is ", Math.ceil(5.8)) 
+//     console.log("5.8 rounded down to nearest integer is ", Math.floor(5.8)) 
+
+//     // Abs function
+//     console.log("Absolute value of 5.66 is  ", Math.abs(5.66)) 
+//     console.log("Absolute value of -5.66 is  ", Math.abs(-5.66))
+
+//     // Trinonometric Functions
+//     console.log("The value of sin(pi) is ", Math.sin(Math.PI/2))
+//     console.log("The value of tan(pi) is ", Math.tan(Math.PI/2))
+//     console.log("The value of cos(pi) is ", Math.cos(Math.PI/2))
+
+//     // Min and max functions
+//     console.log("Minimum value of 4, 5, 6 is ", Math.min(4,5, 6));
+//     console.log("Minimum value of 14, 5, 16 is ", Math.min(14,5, 16));
+//     console.log("Maximum value of 4, 5, 6 is ", Math.max(4,5, 6));
+//     console.log("Maximum value of 14, 5, 16 is ", Math.max(14,5, 16));
+
+//     // Generating a random number
+//     let r = Math.random();
+//     // Random number b/w (a, b) = a + (b-a)*Math.random()
+//     let a1 = 50;
+//     let b1 = 60;
+//     let r50_60 = a1 + (b1-a1)*Math.random();
+//     console.log("The random number is ", r)
+//     console.log("The random number is ", r50_60)
+
+// let jsonobj ={
+//     name: "maulik",
+//     chennal : "chw",
+//     friend : "rohan Das"
+// }
+
+// // stringify function help us to convert object to string
+// console.log(jsonobj);
+// let myjsonstr = JSON.stringify(jsonobj)
+// console.log(myjsonstr)
+
+// // to replace any variable in string 
+// myjsonstr= myjsonstr.replace("maulik","meet")
+// console.log(myjsonstr)
+
+// // convert back string to object
+// newjson= JSON.parse(myjsonstr)
+// console.log(newjson)
+
+
+
+//   function greet(name){
+//                 console.log("hello good morning "+ name);
+//             }
+
+//            settime= setTimeout(greet,5000,"maulik");
+//            console.log(settime)
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+</body>
+
+</html>
