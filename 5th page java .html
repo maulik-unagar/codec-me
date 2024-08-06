@@ -1,0 +1,509 @@
+
+<html>
+
+<body onresize="myFunction()">
+    <p id="demo"> </p>
+
+    <!-- parsing the data with json  -->
+    <h2>Creating an Object from a JSON String</h2>
+    <p id="deeemo"></p>
+
+
+    <button onclick="getLocation()">click here to see your Giolocation</button>
+<p id="de"></p>
+
+
+
+
+    <script type="text/javascript">
+        console.log("11")
+        document.write("11")
+        // window.alert("229")
+        document.getElementById("demo").innerHTML = "hello";
+
+        //use const if value and type will not change in futute -- arrary and object specially
+        const aa = 5
+        const bb = 4
+        let zz = aa + bb;
+        document.write("total is: " + zz)
+
+        // use "\'" for single quote 
+        // use "\"" for double quote
+        // use "\\" for backslash
+
+        //string as a object
+        // var ww= new string ("maulik")  //giving error -confirm on net
+        // var we= "maulik"
+
+        //arrays use numbers to access its element --array[2]
+        // objects use name to  access the elements 
+        // Ex--
+        var person = {
+            name: "maulik",
+            number: 44
+        };
+        document.write(person.name)
+        document.write("<hr>")
+
+        // ----------string propertie-------------
+
+        //         var x = "This practical is based on javascript practical";
+        //        var y ="Practical 10 is performed in TC1";
+
+        //        var a = x + y;
+        //        document.write(a + "<hr>");
+
+        // var b = y.concat(" ",x);
+        //        document.write(b + "<hr>");
+        //        document.write(x.length + "<hr>");
+
+        //  var c = x.indexOf("practical");
+        //        document.write(c + "<hr>");
+
+        //    var d = x.search("on");
+        //        document.write(d + "<hr>");
+
+        //        var e = y.slice(2,8);
+        //        document.write(e + "<hr>");
+
+        //        var f = y.substring(2,8);
+        //        document.write(f + "<hr>");
+
+        //        var g = y.substr(2,10);
+        //        document.write(g + "<hr>");
+
+        //       y.replace("practical", "ten");
+        //        document.write(y.replace("Practical", "ten") + "<hr>");
+
+
+        //        document.write(y.toLocaleLowerCase() + "<hr>");
+
+        //        var i = "  hello   world   ";
+        //        document.write(i.trim());
+
+        //        var j = y.charCodeAt(2);
+        //        document.write(j + "<hr>");
+
+        //        var k = "a|b|c|d|e";
+        //        document.write(k.split("|"));
+
+        // ---------------array properties---------
+
+        // var fruit = ["banana","mango","chickoo"];
+        //             document.write(fruit.length + "<hr>");
+
+        // 	    var a =fruit.push("papaya");
+        //             document.write(fruit + "<hr>");
+        //             document.write(fruit.pop()+ "<hr>");
+        //             document.write(fruit + "<hr>");
+
+        // 	  var b = fruit.shift();
+        //             document.write(fruit + "<hr>");
+
+        // 	  var c = fruit.unshift("banana");
+        //             document.write(fruit + "<hr>");
+
+        // 	  var vegi = ["tomato","potato"];
+        //             var c = fruit.concat(vegi);
+        //             document.write(c +"<hr>");
+        //             document.write(c.sort()+"<hr>");
+        //             document.write(c.reverse()+"<hr>");
+
+
+        //---------function declaration-----------
+        var x = myFunction(4, 3);
+        document.write(x);
+        function myFunction(a, b) {
+            return a * b;
+        }
+        //--------function expression stored in variable-----
+        var x = function myFunction(a, b) {
+            return a * b;
+        }
+        document.write(x(3, 4));
+
+        //-----------if-else loop-----------
+        var book = "maths";
+        if (book == "history") {
+            document.write("<b>History Book</b>");
+        }
+        else if (book == "maths") {
+            document.write("<b>Maths Book</b>");
+        }
+        else {
+            document.write("<b>Unknown Book</b>");
+        }
+
+        //--------switch block-----------
+        var grade = 'A';
+        document.write("Entering switch block<br />");
+        switch (grade) {
+            case 'A':
+                document.write("Good job<br />");
+                break;
+
+            case 'B':
+                document.write("Pretty good<br />");
+                break;
+
+            case 'C':
+                document.write("Passed<br />");
+                break;
+            case 'D':
+                document.write("Not so good<br />");
+                break;
+
+            case 'F':
+                document.write("Failed<br />");
+                break;
+
+            default:
+                document.write("Unknown grade<br />")
+        }
+
+        // --------for of/for in loops--------
+        // for in:
+        var person = { fname: "John", lname: "Doe", age: 25 };
+        var x;
+        for (x in person) {
+            document.write(person[x] + " ");
+        }
+        //for of:
+        //for of string
+        var txt = 'JavaScript';
+        var x;
+        for (x of txt) {
+            document.write(x + "<br >");
+        }
+        //for array:
+        var cars = ['BMW', 'Volvo', 'Mini'];
+        var x;
+
+        for (x of cars) {
+            document.write(x + "<br >");
+        }
+
+        // ----------------alert pop up-----------
+
+        function myFunction1() {
+            var txt;
+            if (confirm("Press a button!")) {
+                txt = "You pressed OK!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            window.alert(txt);
+        }
+
+        //---------promt box------------(imp)---
+        function myFunction2() {
+            var txt;
+            var person = prompt("Please enter your name:", "Your name");
+            if (person == null || person == "") {
+                txt = "User cancelled the prompt.";
+            } else {
+                txt = "Hello " + person + "! How are you today?";
+            }
+            document.write(txt);
+        }
+
+        //------------confirm box------------
+        function myFunction3() {
+            var txt;
+            if (confirm("Press a button!")) {
+                txt = "You pressed OK!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            window.alert(txt);
+        }
+
+        //------------------window events-----------
+        function myFunction() {
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+            var txt = "Window size: width=" + w + ", height=" + h;
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+
+        // -----------------mouse events ------------
+
+        function mover() {
+            document.getElementById("h1").style.color = "red";
+        }
+        function mout() {
+            document.getElementById("h1").style.color = "black";
+        }
+
+        // ----------keyboard events-------------
+        function myFunction4() {
+            alert("You pressed a key inside the input field");
+        }
+
+        //----------new date--------------
+        const dd = new Date();
+        document.write("<hr>")
+        document.write(dd + "<hr>")
+        //JavaScript counts months from 0 to 11:
+        // Specifying a month higher than 11, will not result in an error but add the overflow to the next year
+
+
+        //-------------- use of this keyword---------------
+        const personn = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        // Display data from the object:
+        document.write(personn.fullName());
+
+
+        // writing function using aerro
+        // ex:
+        //let hello = function() {
+        //   return "Hello World!";
+        // } 
+        let hello = "";
+
+        hello = () => {
+            return "Hello World!";
+        }
+
+        document.write(hello());
+
+        //---------form validation using java script--------
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+
+        //------------------ Email vali----------------
+        function validateEmail(elementValue) {
+            var emailPattern = /^[a-zA-Z0-9_\.\-]+\@[a-zA-Z0-9\-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(elementValue);
+        }
+
+        // --------------java class and constructer--------- class method has same syntex as object--just use class in place of object to declare class
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+        const myCar1 = new Car("Ford", 2014);
+        const myCar2 = new Car("Audi", 2019);
+        document.getElementById("demo").innerHTML =
+            myCar1.name + " " + myCar2.name;
+
+
+        //------------- Use the keyword class to create a class.-------
+        // Always add a constructor() method.
+        // Then add any number of methods.
+        // Example:
+        // class ClassName {
+        //   constructor() { ... }
+        //   method_1() { ... }
+        //   method_2() { ... }
+        //   method_3() { ... }
+        // }
+        //---------code not working----------
+        // class Car {
+        //   constructor(name, year) {
+        //     this.name = name;
+        //     this.year = year;
+
+        //   }
+        //   age() {
+        //     const date = new Date();
+        //     return date.getFullYear() - this.year;
+        //   }
+        // }
+
+        // const myCar = new Car("Ford", 2014);
+        // document.getElementById("demo").innerHTML =
+        // "My car is " + myCar.age() + " years old.";
+
+
+
+        // Example of use of object with constructer
+
+
+
+
+
+
+
+        //--------- Constructor function for Person objects--------
+        // function person(fnm, lnm, age, length, color)
+        // 			{
+
+        // 				this.firstname = fnm;
+        // 				this.lastname = lnm;
+        // 				this.age = age;
+        // 				this.length = length;
+        // 				this.color = color;
+        // 			}
+
+        // 			// Create a Person object
+        // 			var person1 = new person("ram", "patel", 23, "long", "red");
+
+        // 			document.write(person1.firstname + " is " + person1.age + " years old." + "<br>");
+        // 			document.write(person1.hair.color + " ");
+
+
+        // ----------open new window using window method---------------
+        // use openwindow and closewindow in body tag---very nice to know this
+        var myWindow;
+
+        function openWin() {
+            myWindow = window.open("", "myWindow", "width=400, height=200");
+        }
+// console.log(openWin())
+        function closeWin() {
+            if (myWindow) {
+                myWindow.close();
+            }
+        }
+
+        // ----------------Charts--------------------------
+        // ----------------see pdf for ,Bar Charts Horizontal Bar Charts, Pie Charts, Donut charts code--------------------------
+        // ----------------Charts--------------------------
+
+
+
+        // JavaScript also has a built in function for converting an object into a JSON string:
+        // JSON.stringify()
+        // Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+        // Use the JavaScript function JSON.parse() to convert text into a JavaScript object:
+        // const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+        // Example:
+
+        const txtt = '{"name":"meet", "age":30, "city":"New York"}'
+        // const text = '[ "Ford", "BMW", "Audi", "Fiat" ]';   //same as above can be done witharray
+        const obj = JSON.parse(txtt);
+        document.getElementById("deeemo").innerHTML = obj.name + ", " + obj.age;
+        //and call here array , put obj[0] after inner html in above line to print array 
+
+
+        // const obj = {name: "John", age: 30, city: "New York"};
+        // Use the JavaScript function JSON.stringify() to convert it into a string.
+        // const myJSON = JSON.stringify(obj); 
+        // The result will be a string following the JSON notation.
+        // Example: use it by giving deomo id in body tag
+        // const obj = {name: "John", age: 30, city: "New York"};
+        // const myJSON = JSON.stringify(obj);
+        // document.getElementById("deeemo").innerHTML = myJSON;
+
+
+
+        // ---------------use of canvas----------- 
+        // ---------------code not working----------- 
+        // var c = document.getElementById("myCanvas");
+        // var ctx = c.getContext("2d");
+        // ctx.beginPath();
+        // ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        // ctx.stroke();
+
+// ------------------see your gio-location------------
+        const xxx = document.getElementById("de");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  xxx.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+// ------------------------------------------------------
+// ---------------draging Image using drag and drop api----html and css only 
+// -----------------web worker-java script running in background in browser without affecting the performance 
+// ----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <hr>
+    <hr>
+    <!-- ----------------alert popup----------- -->
+    <button onclick="myFunction1()">Click to call alert pop-up</button>
+    <!-- ----------------promt box------------- -->
+    <button onclick="myFunction2()">this is promt box </button>
+    <p id="demo"></p>
+    <!-- ----------------confirm box------------- -->
+    <button onclick="myFunction3()">click to seeconfirm box</button>
+    <!-- -------------- window evens---------------- -->
+    <!-- use onload , onresize ,onupload , onresize , onmove , onerror ,onfocus ,onblur  -->
+    <!-- <body onresize="myFunction()">------------this in body tag -->
+    <p id="demo"></p>
+    <!-- -----------------Mouse events ------------ -->
+    <!-- use mousedown, onmouseup, onmousemove , onmouseout , onmouseover , onclick , ondblclick -->
+    <h2 id="h1" onmouseover="mover()" onmouseout="mout()">Mouse Event when mouse over it</h2>
+    <!-- ----------------- keyboard events ------------ -->
+    <!-- use onkeydown ,onkeyup ,onkeypress  -->
+    <input type="text" onkeypress="myFunction4()" placeholder="press any key here to trigger keyboard events "
+        style="width: 300px;">
+    <!-- form events -- onreset and on submit --- do it yourself -->
+
+    <!-- -------form validation using java script------ -->
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        form validation using java: <input style="width: 300px;" type="text" name="fname"
+            placeholder="Enter nothing and submit to validate using java ">
+        <input type="submit" value="Submit">
+    </form>
+    <!-- ----------------form validation--------------- -->
+    <form action=“” method=“post”>
+        Email: <input type=“text” name=“email” required>
+        <input type="submit" value="submit" onclick="validateEmail()">
+    </form>
+
+    <!-- ----------open new window using window method--------------- -->
+    <button onclick="openWin()">Open "myWindow"</button>
+    <button onclick="closeWin()">Close "myWindow"</button>
+    <br><br>
+    <div id="msg"></div>
+
+    <!-- ---------------use of canvas----------- -->
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+
+
+</body>
+
+</html>
